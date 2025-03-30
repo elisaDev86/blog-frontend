@@ -1,0 +1,46 @@
+.footer {
+    background-color: #180161;
+    color: #EEEEEE;
+    padding: 2rem;
+    text-align: center;
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    margin-bottom: 1rem;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Media query per schermi piccoli */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1rem;
+    }
+
+    .socialLinks {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
