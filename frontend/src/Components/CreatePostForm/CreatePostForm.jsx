@@ -28,6 +28,8 @@ const CreatePostForm = () => {
             const imageUrl = data.secure_url;
 
             // Salva il post nel backend
+            console.log("Chiamata API:", `${import.meta.env.VITE_BACKEND_HOST}/api/posts`);
+
             await fetch(`${backendUrl}/api/posts`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
