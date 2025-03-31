@@ -33,7 +33,7 @@ const EditPostForm = () => {
       formData.append("image", post.imageUrl);
 
       // Upload a Cloudinary
-      const res = await fetch("http://localhost:5000/api/cloudinary/upload", {
+      const res = await fetch(`${backendUrl}/api/cloudinary/upload`, {
         method: "POST",
         body: formData,
       });
@@ -41,7 +41,7 @@ const EditPostForm = () => {
       const data = await res.json();
       const imageUrl = data.result.url;
 
-      await fetch(`http://localhost:5000/api/posts/${id}`, {
+      await fetch(`${backendUrl}/api/posts/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
