@@ -19,7 +19,7 @@ const CreatePostForm = () => {
         formData.append("upload_preset", "tuo_preset_cloudinary");
 
         try {
-            const res = await fetch("https://api.cloudinary.com/v1_1/tuo_account/upload", {
+            const res = await fetch(`${backendUrl}/api.cloudinary.com/v1_1/tuo_account/upload`, {
                 method: "POST",
                 body: formData,
             });
